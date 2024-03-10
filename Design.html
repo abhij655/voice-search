@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <link rel="stylesheet" href="Design.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+    <body>
+
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" placeholder="Enter username" id="username"/>
+        
+            <button type="button" onclick="searchByUsername()">Search</button>
+        </div>
+        
+        <script>
+            function searchByUsername() {
+                var username = document.getElementById('username').value;
+
+                console.log("Searching for username:", username);
+            }
+        
+            document.getElementById("username").addEventListener("keyup", function(event) {
+             
+                if (event.key === "Enter") {
+                    searchByUsername();
+                }
+            });
+        </script>
+
+        <button class="btn">
+            <span class="material-icons">mic</span>
+        </button>
+
+        <div class="displayName">Click on Button to find</div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
